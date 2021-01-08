@@ -1,0 +1,7 @@
+
+include /dls_sw/prod/R3.14.12.7/support/feMasterConfig/1-0/configure/FE_COMMON_RELEASE
+include /dls_sw/prod/R3.14.12.7/support/feMasterConfig/1-0/configure/FE_LINUX_RELEASE
+
+
+# EPICS_BASE usually appears last so other apps can override stuff:
+EPICS_BASE=/dls_sw/epics/R3.14.12.7/base
