@@ -15,13 +15,17 @@ colDX = 17.38
 rowDY = 7.44
 
 transistorDX = 0
-transistorDY = -6
+transistorDY = -5
 
-baseRDX = 4.826 - xOrigin
-baseRDY = -10
+#old:
+#baseRDX = 4.826 - xOrigin
+#baseRDY = -8
+
+baseRDX = 0 + xOrigin
+baseRDY = -4.5
 
 emRDX = 6.731 - xOrigin
-emRDY = -10
+emRDY = -8
 
 xCoords = list()
 yCoords = list()
@@ -31,7 +35,7 @@ yTicks = list()
 
 ledComponentNo = 1
 transComponentNo = 101
-baseResComponentNo = 101
+baseResComponentNo = 1
 emResComponentNo = 201
 
 
@@ -48,7 +52,7 @@ for (let x in s.FOOTPRINT){
 	for(let i in s.FOOTPRINT[x].TEXT){
 		var id = s.FOOTPRINT[x].TEXT;
 		var name = s.FOOTPRINT[x].TEXT[i].text;
-		if(name.slice(0,2)=="R2"){
+		if(name.slice(0,1)=="R"){
 			LEDs.push([name,x]);
 		}
 	}
@@ -77,10 +81,11 @@ def printCoords(x,y):
     global transComponentNo
     global baseResComponentNo
     global emResComponentNo
-    #formatPrint("L",ledComponentNo,x,y)
+    formatPrint("L",ledComponentNo,x,y)
     #formatPrint("Q",transComponentNo,x+transistorDX,y+transistorDY)
     #formatPrint("R",baseResComponentNo,x+baseRDX,y+baseRDY)
-    formatPrint("R",emResComponentNo,x+emRDX,y+emRDY)
+    #formatPrint("R",baseResComponentNo,x,y+baseRDY)
+    #formatPrint("R",emResComponentNo,x+emRDX,y+emRDY)
 
     """
     print(f"L{ledComponentNo} -> X:{x} Y:{y}")
