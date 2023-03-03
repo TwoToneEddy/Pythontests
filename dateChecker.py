@@ -1,3 +1,4 @@
+#!/home/lee/.platformio/penv/bin/python3
 import calendar
 import datetime
 import matplotlib.pyplot as plt
@@ -12,16 +13,16 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-balance = 563.72
-weeklyDeduction = 140
-monthlyPay = 617.70
+balance = 317.30
+weeklyDeduction = 119
+monthlyPay = 526.97
 history = list()
 
 today = datetime.date.today()
+today = datetime.date(2023,3,4)
 currentYear = int(today.strftime("%d/%m/%y").split('/')[2])
 currentMonth = int(today.strftime("%d/%m/%y").split('/')[1])
 currentDay = int(today.strftime("%d/%m/%y").split('/')[0])
-#currentDay+=1
 # Number of days in a month (october for example)
 #print(calendar.monthrange(2020,10)[1])
 
@@ -29,10 +30,11 @@ currentDay = int(today.strftime("%d/%m/%y").split('/')[0])
 friday = 4
 
 days = {"Mon":0,"Tue":1,"Wed":2,"Thu":3,"Fri":4,"Sat":5,"Sun":6}
+currentDay = days["Sat"]
 
 
-
-for year in [20,21,22]:
+lowBalance = balance
+for year in [23,24]:
     if(currentYear < year):
         currentMonth=1
     for month in range(currentMonth,13):
@@ -43,6 +45,8 @@ for year in [20,21,22]:
                     pass
                 else:
                     balance = balance + monthlyPay
+                    if balance < lowBalance:
+                        lowBalance = balance
                     history.append(balance)
                     if( balance >= 100 and balance < 300):
                         print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {bcolors.OKGREEN}+£{monthlyPay} \t {bcolors.OKBLUE}£{round(balance,2)}")
@@ -55,6 +59,8 @@ for year in [20,21,22]:
                 
             if(dayOfWeek == days.get("Fri") and (day > currentDay or month > currentMonth or year > currentYear) ):
                 balance = balance-weeklyDeduction
+                if balance < lowBalance:
+                    lowBalance = balance
                 history.append(balance)
                 if( balance >= 100 and balance < 300):
                     print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {bcolors.FAIL}-£{weeklyDeduction} \t {bcolors.OKBLUE}£{round(balance,2)}")
@@ -65,6 +71,8 @@ for year in [20,21,22]:
                 if( balance < 0):
                     print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {bcolors.FAIL}-£{weeklyDeduction} \t {bcolors.FAIL}£{round(balance,2)}")
 
+
+print(f"Lowest = {lowBalance}")
 plt.plot(history,'--bo')
 plt.axhline(y=0.0)
 plt.ylabel('some numbers')
