@@ -19,40 +19,36 @@ import datetime
 import matplotlib.pyplot as plt
 
 
-petplan=-15.85
-sky=-25.91
-phone=-10
-KieraCarins=-24.88
-homeIns=-12.81
-car=-320
-carins=-33.28
+gym=-88
+phone=-11.40
+homeIns=-13.75
+lifeIns=-20
+carins=-48.56
+vodafone=-19
+car=-230.39
+yukimeds = -12.50
+petplan=-11.87
 pete=-30
-washerDryer=-11.18
-lifeIns=-11.92
-pay=464.95
-gym=-83
-contacts=-11
-kiera=124.88
+gasElec = -110
+pay=595.47
 
 # Frozen gym membership atm
-pay = pay + gym
+#pay = pay + gym
 
 bills = {key: list() for key in range(0,32)}
 
-bills[27].append(petplan)
-bills[25].append(sky)
+bills[10].append(petplan)
 bills[24].append(phone)
-bills[22].append(KieraCarins)
-bills[20].append(homeIns)
+bills[8].append(vodafone)
+bills[21].append(carins)
+bills[21].append(homeIns)
 bills[18].append(pay)
-bills[18].append(car)
-bills[18].append(carins)
+bills[23].append(car)
 bills[18].append(pete)
-bills[18].append(washerDryer)
 bills[18].append(lifeIns)
-#bills[3].append(gym)
-bills[1].append(contacts)
-bills[1].append(kiera)
+bills[18].append(yukimeds)
+bills[18].append(gasElec)
+bills[3].append(gym)
 
 
 
@@ -66,12 +62,11 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-balance = 11.51
-weeklyDeduction = 140
-monthlyPay = 617.70
+balance = 59.04
 history = list()
 
 today = datetime.date.today()
+today = datetime.date(2023,3,4)
 currentYear = int(today.strftime("%d/%m/%y").split('/')[2])
 currentMonth = int(today.strftime("%d/%m/%y").split('/')[1])
 currentDay = int(today.strftime("%d/%m/%y").split('/')[0])
@@ -86,8 +81,8 @@ days = {"Mon":0,"Tue":1,"Wed":2,"Thu":3,"Fri":4,"Sat":5,"Sun":6}
 
 rowFormat = "{}"
 rowFormat += "{:<20}{:<20}{:<20}"
-
-for year in [21,22]:
+lowBalance = balance
+for year in [23,24]:
     if(currentYear < year):
         currentMonth=1
     for month in range(currentMonth,13):
@@ -106,6 +101,8 @@ for year in [21,22]:
                             color = bcolors.FAIL
 
                         balance = balance + bill
+                        if balance < lowBalance:
+                            lowBalance = balance
                         if( balance >= 100 and balance < 300):
                             #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.OKBLUE}£{round(balance,2)}")
                             data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(bill)}",f"{bcolors.OKBLUE}£{round(balance,2)}"]
@@ -124,6 +121,7 @@ for year in [21,22]:
                             print(rowFormat.format("",*data))
                     history.append(balance)
 
+print(f"Lowest = {lowBalance}")
 plt.plot(history,'--bo')
 plt.axhline(y=0.0)
 plt.ylabel('some numbers')
