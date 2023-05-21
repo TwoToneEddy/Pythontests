@@ -1,64 +1,57 @@
-#petplan         27  -15.85
-#sky             25  -25.91
-#phone           24  -10
-#KieraCarins     22  -24.88
-#homeIns         20  -12.81
-#car             18  -320
-#carins          18  -33.28
-#pete            18  -30
-#washerDryer     18  -11.18
-#lifeIns         18  -11.92
-#pay             18  463.73
-#gym             3   -83
-#contacts        1   -11
-#kiera           1   124.88
-
-
 import calendar
 import datetime
 import matplotlib.pyplot as plt
 
-
-gym=-88
-phone=-11.40
-homeIns=-13.75
-lifeIns=-20
-carins=-48.56
-vodafone=-19
-car=-230.39
-yukimeds = -12.50
-petplan=-11.87
+pay = 2903
+yukiMeds=-12.5
+water=-30
+kieraLifeIns=-8.85
+councilTax=-190
+houseIns=-13.75
+carInsCC=-48.56
+gasElec=-110
+leaf=-230.39
 pete=-30
-gasElec = -110
-pay=595.47
-
-# Frozen gym membership atm
-#pay = pay + gym
+fromMum=6
+leeLifeIns=-11.92
+nespresso=-25
+mortage=-1048
+gym=-88
+sofa=-16
+amazonPrime=-8.99
+leePhone=-6.99
+petPlan=-11.87
+vodafone=-21.5
+kieraPhone=-5
+youTube=-19.99
 
 bills = {key: list() for key in range(0,32)}
 
-bills[10].append(petplan)
-bills[24].append(phone)
-bills[8].append(vodafone)
-bills[22].append(carins)
-bills[21].append(homeIns)
 bills[18].append(pay)
-bills[23].append(car)
-bills[22].append(pete)
-#bills[18].append(lifeIns)
-bills[22].append(lifeIns)
-bills[18].append(yukimeds) #90443700
-#bills[18].append(gasElec)
-bills[22].append(gasElec)
-bills[3].append(gym)#90443700
+bills[18].append(yukiMeds)
+bills[20].append(water)
+bills[20].append(kieraLifeIns)
+bills[20].append(councilTax)
+bills[20].append(houseIns)
+bills[22].append(carInsCC)
+bills[24].append(gasElec)
+bills[24].append(leaf)
+bills[24].append(pete)
+bills[24].append(fromMum)
+bills[24].append(leeLifeIns)
+bills[28].append(nespresso)
+bills[1].append(mortage)
+bills[3].append(gym)
+bills[4].append(sofa)
+bills[6].append(amazonPrime)
+bills[9].append(leePhone)
+bills[10].append(petPlan)
+bills[11].append(vodafone)
+bills[12].append(kieraPhone)
+bills[15].append(youTube)
 
-
-#bills[18].append(pay)
-#bills[18].append(pete)
-#bills[18].append(yukimeds)
-#bills[3].append(gym)
-
-
+weeklyConsumables = -101
+weeklyDisposable = -118
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -69,17 +62,15 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-balance = 59.04
+balance = 2895.78
 history = list()
 
-today = datetime.date.today()
-today = datetime.date(2023,3,4)
+#today = datetime.date.today()
+today = datetime.date(2023,5,19)
 currentYear = int(today.strftime("%d/%m/%y").split('/')[2])
 currentMonth = int(today.strftime("%d/%m/%y").split('/')[1])
 currentDay = int(today.strftime("%d/%m/%y").split('/')[0])
-#currentDay+=1
-# Number of days in a month (october for example)
-#print(calendar.monthrange(2020,10)[1])
+
 
 
 friday = 4
@@ -95,6 +86,49 @@ for year in [23,24]:
     for month in range(currentMonth,13):
         for day in range(1,calendar.monthrange(year,month)[1]+1):
             dayOfWeek=calendar.weekday(year,month,day)
+            
+            # Friday standing orders
+            if(dayOfWeek == days.get("Fri") and (day > currentDay or month > currentMonth or year > currentYear) ):
+                balance = balance + weeklyConsumables
+                if balance < lowBalance:
+                    lowBalance = balance
+                if( balance >= 100 and balance < 300):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.OKBLUE}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyConsumables)}",f"{bcolors.OKBLUE}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+                if( balance >= 300):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.OKGREEN}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyConsumables)}",f"{bcolors.OKGREEN}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+                if( balance >= 0 and balance < 100):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.WARNING}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyConsumables)}",f"{bcolors.WARNING}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+                if( balance < 0):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.FAIL}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyConsumables)}",f"{bcolors.FAIL}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+
+                balance = balance + weeklyDisposable
+                if balance < lowBalance:
+                    lowBalance = balance
+                if( balance >= 100 and balance < 300):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.OKBLUE}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyDisposable)}",f"{bcolors.OKBLUE}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+                if( balance >= 300):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.OKGREEN}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyDisposable)}",f"{bcolors.OKGREEN}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+                if( balance >= 0 and balance < 100):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.WARNING}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyDisposable)}",f"{bcolors.WARNING}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+                if( balance < 0):
+                    #print(f"{bcolors.ENDC}{day}/{month}/20{year}:\t {color}{sign}£{abs(bill)} \t\t {bcolors.FAIL}£{round(balance,2)}")
+                    data=[f"{bcolors.ENDC}{day}/{month}/20{year}:",f"{color}{sign}£{abs(weeklyDisposable)}",f"{bcolors.FAIL}£{round(balance,2)}"]
+                    print(rowFormat.format("",*data))
+
             if(day in bills.keys()):
                 if(month == currentMonth) and(year==currentYear) and (day < currentDay):
                     pass
