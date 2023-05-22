@@ -37,19 +37,20 @@ pay=595.47
 
 bills = {key: list() for key in range(0,32)}
 
-bills[10].append(petplan)
-bills[24].append(phone)
-bills[8].append(vodafone)
-bills[22].append(carins)
-bills[21].append(homeIns)
 bills[18].append(pay)
-bills[23].append(car)
-bills[22].append(pete)
-#bills[18].append(lifeIns)
+bills[21].append(homeIns)
 bills[22].append(lifeIns)
+#bills[18].append(lifeIns)
+bills[22].append(carins) #Yet to be automated
+bills[22].append(pete)
+bills[22].append(gasElec)
+bills[23].append(car) #Yet to be automated
+bills[5].append(phone)
+bills[10].append(petplan)
+bills[8].append(vodafone)
+
 bills[18].append(yukimeds) #90443700
 #bills[18].append(gasElec)
-bills[22].append(gasElec)
 bills[3].append(gym)#90443700
 
 
@@ -69,11 +70,11 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-balance = 59.04
+balance = 138.21
 history = list()
 
 today = datetime.date.today()
-today = datetime.date(2023,3,4)
+#today = datetime.date(2023,3,4)
 currentYear = int(today.strftime("%d/%m/%y").split('/')[2])
 currentMonth = int(today.strftime("%d/%m/%y").split('/')[1])
 currentDay = int(today.strftime("%d/%m/%y").split('/')[0])

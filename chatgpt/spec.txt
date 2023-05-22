@@ -1,0 +1,27 @@
+Create a Node-RED json flow (separate flow) configuration for an automated battery capacity tester. The system will have 2 analog inputs:
+
+AI0 - Battery voltage
+AI1 - Battery current sensor
+
+And a PWM output controlling a mosfet:
+
+GPIO 27 pin 13
+
+The user will provide the following paramters:
+
+End voltage
+Max current
+
+When the user presses a button on the web interface the system should activate start the measurement sequence which is as follows:
+
+The mosfet output will connect the battery to the load, therefore the current can be controlled by varying the duty cycle of the PWM controlling the mosfet, the PWM is directly proportional to the current. Use the PWM output cycle the mosfet to achieve the "Max current" in a current control mode. When the battery voltage is within 0.5V of the end voltage the mode should switch from current control to voltage control, in this mode the controller PWM duty cycle will be proportional to the difference between the provided end voltage and the battery voltage. When battery voltage == end voltage the sequence will stop and will not restart until the user requests it.
+
+During the battery discharge the system should display the current, voltage and power. It should also integrate the current and power to provide the amount of amp hours and Wh that have been discharged.
+
+The analog inputs are using an MCP3424 based ADC with the following inputs:
+
+AI0 - Battery voltage
+AI1 - Battery current sensor
+
+With the previous code you sent me I get the error Error: Input not a valid flow - item 0 missing 'id' property. Please send the code with this error corrected.
+Please don't say anything before or after the json, just send the json.

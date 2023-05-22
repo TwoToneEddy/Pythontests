@@ -1,0 +1,225 @@
+if(value[0] == "R1"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'7.12mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'4.0mm'})});
+}
+if(value[0] == "R5"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'12.370000000000001mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'6.91mm'})});
+}
+if(value[0] == "R9"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'17.509999999999998mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'3.82mm'})});
+}
+if(value[0] == "R2"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'7.12mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.880000000000003mm'})});
+}
+if(value[0] == "R6"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'12.370000000000001mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'21.79mm'})});
+}
+if(value[0] == "R10"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'17.509999999999998mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.700000000000003mm'})});
+}
+if(value[0] == "R3"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'7.12mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.760000000000005mm'})});
+}
+if(value[0] == "R7"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'12.370000000000001mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'36.67mm'})});
+}
+if(value[0] == "R11"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'17.509999999999998mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.58mm'})});
+}
+if(value[0] == "R4"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'7.12mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.64mm'})});
+}
+if(value[0] == "R8"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'12.370000000000001mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'51.55mm'})});
+}
+if(value[0] == "R12"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'17.509999999999998mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.46mm'})});
+}
+if(value[0] == "R13"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'24.5mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'11.440000000000001mm'})});
+}
+if(value[0] == "R16"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'29.75mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'14.350000000000001mm'})});
+}
+if(value[0] == "R19"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'34.89mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'11.260000000000002mm'})});
+}
+if(value[0] == "R14"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'24.5mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'26.32mm'})});
+}
+if(value[0] == "R17"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'29.75mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'29.23mm'})});
+}
+if(value[0] == "R20"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'34.89mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'26.14mm'})});
+}
+if(value[0] == "R15"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'24.5mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'41.2mm'})});
+}
+if(value[0] == "R18"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'29.75mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'44.11mm'})});
+}
+if(value[0] == "R21"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'34.89mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'41.02mm'})});
+}
+if(value[0] == "R22"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'41.879999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'4.0mm'})});
+}
+if(value[0] == "R26"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'47.129999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'6.91mm'})});
+}
+if(value[0] == "R30"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'52.269999999999996mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'3.82mm'})});
+}
+if(value[0] == "R23"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'41.879999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.880000000000003mm'})});
+}
+if(value[0] == "R27"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'47.129999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'21.79mm'})});
+}
+if(value[0] == "R31"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'52.269999999999996mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.700000000000003mm'})});
+}
+if(value[0] == "R24"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'41.879999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.760000000000005mm'})});
+}
+if(value[0] == "R28"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'47.129999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'36.67mm'})});
+}
+if(value[0] == "R32"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'52.269999999999996mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.58mm'})});
+}
+if(value[0] == "R25"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'41.879999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.64mm'})});
+}
+if(value[0] == "R29"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'47.129999999999995mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'51.55mm'})});
+}
+if(value[0] == "R33"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'52.269999999999996mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.46mm'})});
+}
+if(value[0] == "R34"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'59.26mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'11.440000000000001mm'})});
+}
+if(value[0] == "R37"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'64.51mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'14.350000000000001mm'})});
+}
+if(value[0] == "R40"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'69.64999999999999mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'11.260000000000002mm'})});
+}
+if(value[0] == "R35"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'59.26mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'26.32mm'})});
+}
+if(value[0] == "R38"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'64.51mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'29.23mm'})});
+}
+if(value[0] == "R41"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'69.64999999999999mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'26.14mm'})});
+}
+if(value[0] == "R36"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'59.26mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'41.2mm'})});
+}
+if(value[0] == "R39"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'64.51mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'44.11mm'})});
+}
+if(value[0] == "R42"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'69.64999999999999mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'41.02mm'})});
+}
+if(value[0] == "R43"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'76.64mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'4.0mm'})});
+}
+if(value[0] == "R47"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'81.89mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'6.91mm'})});
+}
+if(value[0] == "R51"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'87.03mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'3.82mm'})});
+}
+if(value[0] == "R44"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'76.64mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.880000000000003mm'})});
+}
+if(value[0] == "R48"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'81.89mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'21.79mm'})});
+}
+if(value[0] == "R52"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'87.03mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.700000000000003mm'})});
+}
+if(value[0] == "R45"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'76.64mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.760000000000005mm'})});
+}
+if(value[0] == "R49"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'81.89mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'36.67mm'})});
+}
+if(value[0] == "R53"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'87.03mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.58mm'})});
+}
+if(value[0] == "R46"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'76.64mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.64mm'})});
+}
+if(value[0] == "R50"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'81.89mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'51.55mm'})});
+}
+if(value[0] == "R54"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'87.03mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.46mm'})});
+}
+if(value[0] == "R55"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'94.02mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'11.440000000000001mm'})});
+}
+if(value[0] == "R58"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'99.27mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'14.350000000000001mm'})});
+}
+if(value[0] == "R61"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'104.41mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'11.260000000000002mm'})});
+}
+if(value[0] == "R56"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'94.02mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'26.32mm'})});
+}
+if(value[0] == "R59"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'99.27mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'29.23mm'})});
+}
+if(value[0] == "R62"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'104.41mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'26.14mm'})});
+}
+if(value[0] == "R57"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'94.02mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'41.2mm'})});
+}
+if(value[0] == "R60"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'99.27mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'44.11mm'})});
+}
+if(value[0] == "R63"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'104.41mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'41.02mm'})});
+}
+if(value[0] == "R64"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'111.4mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'4.0mm'})});
+}
+if(value[0] == "R68"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'116.65mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'6.91mm'})});
+}
+if(value[0] == "R72"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'121.79mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'3.82mm'})});
+}
+if(value[0] == "R65"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'111.4mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.880000000000003mm'})});
+}
+if(value[0] == "R69"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'116.65mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'21.79mm'})});
+}
+if(value[0] == "R73"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'121.79mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'18.700000000000003mm'})});
+}
+if(value[0] == "R66"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'111.4mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.760000000000005mm'})});
+}
+if(value[0] == "R70"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'116.65mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'36.67mm'})});
+}
+if(value[0] == "R74"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'121.79mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'33.58mm'})});
+}
+if(value[0] == "R67"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'111.4mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.64mm'})});
+}
+if(value[0] == "R71"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'116.65mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'51.55mm'})});
+}
+if(value[0] == "R75"){
+	api('moveObjsTo', {objs:[{gId:value[1]}], x:s.canvas.originX + api('valConvert', {type:'real2canvas',val:'121.79mm'}), y:s.canvas.originY+api('valConvert', {type:'real2canvas',val:'48.46mm'})});
+}

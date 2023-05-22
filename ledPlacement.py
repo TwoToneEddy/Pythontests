@@ -21,8 +21,8 @@ transistorDY = -5
 #baseRDX = 4.826 - xOrigin
 #baseRDY = -8
 
-baseRDX = 0 + xOrigin
-baseRDY = -4.5
+baseRDX = 7.030-5.67
+baseRDY = -4
 
 emRDX = 6.731 - xOrigin
 emRDY = -8
@@ -38,6 +38,7 @@ transComponentNo = 101
 baseResComponentNo = 1
 emResComponentNo = 201
 
+lookup = {1:1,2:5,3:9,4:2,5:6,6:10,7:3,8:7,9:11,10:4,11:8,12:12,13:13,14:16,15:19,16:14,17:17,18:20,19:15,20:18,21:21,22:22,23:26,24:30,25:23,26:27,27:31,28:24,29:28,30:32,31:25,32:29,33:33,34:34,35:37,36:40,37:35,38:38,39:41,40:36,41:39,42:42,43:43,44:47,45:51,46:44,47:48,48:52,49:45,50:49,51:53,52:46,53:50,54:54,55:55,56:58,57:61,58:56,59:59,60:62,61:57,62:60,63:63,64:64,65:68,66:72,67:65,68:69,69:73,70:66,71:70,72:74,73:67,74:71,75:75}
 
 globalComponentPrefix = "L"
 
@@ -71,7 +72,7 @@ function myFunc(value,index){
 
 def formatPrint(prefix,componentNo,x,y):
     y = y*-1
-    print(f'if(value[0] == "{prefix}{componentNo}"){{')
+    print(f'if(value[0] == "{prefix}{lookup[componentNo]}"){{')
     print(f"\tapi('moveObjsTo', {{objs:[{{gId:value[1]}}], x:s.canvas.originX + api('valConvert', {{type:'real2canvas',val:'{x}mm'}}), y:s.canvas.originY+api('valConvert', {{type:'real2canvas',val:'{y}mm'}})}});")
     print("}")
     #print(f"{prefix}{componentNo}\n{x}\n{y*-1}")
@@ -81,9 +82,9 @@ def printCoords(x,y):
     global transComponentNo
     global baseResComponentNo
     global emResComponentNo
-    formatPrint("L",ledComponentNo,x,y)
+    #formatPrint("L",ledComponentNo,x,y)
     #formatPrint("Q",transComponentNo,x+transistorDX,y+transistorDY)
-    #formatPrint("R",baseResComponentNo,x+baseRDX,y+baseRDY)
+    formatPrint("R",baseResComponentNo,x+baseRDX,y+baseRDY)
     #formatPrint("R",baseResComponentNo,x,y+baseRDY)
     #formatPrint("R",emResComponentNo,x+emRDX,y+emRDY)
 

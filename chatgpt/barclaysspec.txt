@@ -1,0 +1,12 @@
+Write some python code to automate a bank transfer for me using my banks website https://bank.barclays.co.uk/olb/authlogin/loginAppContainer.do#/authentication.
+The code should take the following paramters for login details:
+
+Account number
+card number5 digit pass code
+memorable word
+
+And the following paramters detailing the transaction to perform:
+
+Source Account
+destination Account
+amount
