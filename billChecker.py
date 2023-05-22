@@ -1,54 +1,30 @@
 import calendar
 import datetime
 import matplotlib.pyplot as plt
+import pandas as pd
 
-pay = 2903
-yukiMeds=-12.5
-water=-30
-kieraLifeIns=-8.85
-councilTax=-190
-houseIns=-13.75
-carInsCC=-48.56
-gasElec=-110
-leaf=-230.39
-pete=-30
-fromMum=6
-leeLifeIns=-11.92
-nespresso=-25
-mortage=-1048
-gym=-88
-sofa=-16
-amazonPrime=-8.99
-leePhone=-6.99
-petPlan=-11.87
-vodafone=-21.5
-kieraPhone=-5
-youTube=-19.99
+
+startRow = 5
+startCol = 2
+
+startRow = startRow - 2
+startCol = startCol - 1
+
+df = pd.read_excel('test.xlsx')
+print(df.iloc[startRow,startCol])
 
 bills = {key: list() for key in range(0,32)}
 
-bills[18].append(pay)
-bills[18].append(yukiMeds)
-bills[20].append(water)
-bills[20].append(kieraLifeIns)
-bills[20].append(councilTax)
-bills[20].append(houseIns)
-bills[22].append(carInsCC)
-bills[24].append(gasElec)
-bills[24].append(leaf)
-bills[24].append(pete)
-bills[24].append(fromMum)
-bills[24].append(leeLifeIns)
-bills[28].append(nespresso)
-bills[1].append(mortage)
-bills[3].append(gym)
-bills[4].append(sofa)
-bills[6].append(amazonPrime)
-bills[9].append(leePhone)
-bills[10].append(petPlan)
-bills[11].append(vodafone)
-bills[12].append(kieraPhone)
-bills[15].append(youTube)
+
+for row in range(0,32):
+    try:
+        desc = df.iloc[row+startRow,1]
+        amount = df.iloc[row+startRow,2]
+        day = int(df.iloc[row+startRow,3])
+        bills[day].append(amount)
+    except Exception as e:
+        break
+
 
 weeklyConsumables = -101
 weeklyDisposable = -118
