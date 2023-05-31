@@ -5,8 +5,8 @@ import pandas as pd
 
 # Indexed from 1, as seen on spreadsheet
 # Starting cells
-billsR = 10
-billsC = 2
+billsR = 14
+billsC = 3
 inR = 4
 inC = 2
 weeklyR = 14
@@ -27,9 +27,10 @@ for row in range(0,32):
         desc = df.iloc[row+billsR,1]
         amount = df.iloc[row+billsR,2]
         day = int(df.iloc[row+billsR,3])
-        bills[day].append(amount)
+        bills[day].append({"desc":desc,"amount":amount})
     except Exception as e:
         break
+
 
 
 weeklyConsumables = -101
@@ -116,14 +117,14 @@ for year in [23,24]:
                     pass
                 else:
                     for bill in bills[day]:
-                        if(bill > 0):
+                        if(bill["amount"] > 0):
                             sign='+'
                             color = bcolors.OKGREEN
                         else:
                             sign = '-'
                             color = bcolors.FAIL
 
-                        balance = balance + bill
+                        balance = balance + bill["amount"]
                         if balance < lowBalance:
                             lowBalance = balance
                         if( balance >= 100 and balance < 300):
