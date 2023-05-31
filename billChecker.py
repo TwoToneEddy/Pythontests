@@ -3,24 +3,30 @@ import datetime
 import matplotlib.pyplot as plt
 import pandas as pd
 
+# Indexed from 1, as seen on spreadsheet
+# Starting cells
+billsR = 10
+billsC = 2
+inR = 4
+inC = 2
+weeklyR = 14
+weeklyC = 6
 
-startRow = 5
-startCol = 2
 
-startRow = startRow - 2
-startCol = startCol - 1
+billsR = billsR - 2
+billsC = billsC - 1
 
-df = pd.read_excel('test.xlsx')
-print(df.iloc[startRow,startCol])
+df = pd.read_excel('Money_baby_inter.xlsx')
+print(df.iloc[billsR,billsC])
 
 bills = {key: list() for key in range(0,32)}
 
 
 for row in range(0,32):
     try:
-        desc = df.iloc[row+startRow,1]
-        amount = df.iloc[row+startRow,2]
-        day = int(df.iloc[row+startRow,3])
+        desc = df.iloc[row+billsR,1]
+        amount = df.iloc[row+billsR,2]
+        day = int(df.iloc[row+billsR,3])
         bills[day].append(amount)
     except Exception as e:
         break
